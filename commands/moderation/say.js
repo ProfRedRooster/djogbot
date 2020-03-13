@@ -18,8 +18,6 @@ module.exports = {
 
   
             message.channel.send(args.join(" "));
-        } else {
-            message.channel.send(args.join(" "));
-        }
+    
     }
 }
