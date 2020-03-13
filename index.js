@@ -1,54 +1,78 @@
-const { Client, Collection } = require("discord.js");
-const { config } = require("dotenv");
+const discord = require("discord.js");
+const botConfig = require("./botConfig.json");
 const fs = require("fs");
+const bot = new discord.Client();
+bot.commands = new discord.Collection();
+fs.readdir("./commands/", (err, files) => {
 
-const client = new Client({
-    disableEveryone: true
+    if(err) console.log(err);
+    var jsFiles = files.filter(f => f.split(".").pop() === "js");
+
+    if(jsFiles.length <= 0) {
+
+        console.log("/commands directory is empty!");
+        rerurn;
+    }
+
+    jsFiles.forEach((f,i) => {
+
+        var fileGet = require(`./commands/${f}`);
+        console.log(`Loaded File ${f}!`);
+
+       try{
+        bot.commands.set(fileGet.help.name, fileGet);
+
+       }catch{
+
+        console.log(`------------WARNING!-------------------`)
+        console.log(`Found empty file ${f}, loaded it anyway`)
+        console.log(`---------------------------------------`)
+
+       }
+
+    })
+
 });
 
-client.commands = new Collection();
-client.aliases = new Collection();
 
-client.categories = fs.readdirSync("./commands/");
+bot.on("ready", async () => {
 
-config({
-    path: __dirname + "/.env"
-});
+    console.log(`Bot started!`)
 
-["command"].forEach(handler => {
-    require(`./handlers/${handler}`)(client);
-});
+    bot.user.setActivity("DJOG");
 
-client.on("ready", () => {
-    console.log(`Hi, ${client.user.username} is now online!`);
+})
 
-    client.user.setPresence({
-        status: "online",
-        game: {
-            name: "DJOG",
-            type: "WATCHING"
+bot.on("message", async message => {
+
+    if(message.author.bot) return;
+
+    if(message.channel.type === "dm") return;
+
+    //var prefix = botConfig.prefix; old method
+
+    var prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
+
+    if(!prefixes[message.guild.id]){
+        prefixes[message.guild.id] = {
+        prefixes: botConfig.prefix
         }
-    }); 
+    }
+
+
+    var prefix = prefixes[message.guild.id].prefixes;
+    var messsageArray = message.content.split(" ");
+
+    var command = messsageArray[0];
+
+    var arguments = messsageArray.slice(1);
+
+
+    var commands = bot.commands.get(command.slice(prefix.length));
+    if(commands) commands.run(bot,message,arguments);
+
+
 });
 
-client.on("message", async message => {
-    const prefix = "!";
 
-    if (message.author.bot) return;
-    if (!message.guild) return;
-    if (!message.content.startsWith(prefix)) return;
-    if (!message.member) message.member = await message.guild.fetchMember(message);
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmd = args.shift().toLowerCase();
-    
-    if (cmd.length === 0) return;
-    
-    let command = client.commands.get(cmd);
-    if (!command) command = client.commands.get(client.aliases.get(cmd));
-
-    if (command) 
-        command.run(client, message, args);
-});
-
-client.login(process.env.token);
+bot.login(process.env.token);
