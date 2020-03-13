@@ -14,8 +14,7 @@ module.exports = {
         if (args.length < 0)
             return message.reply("Nothing to say?").then(m => m.delete(5000));
 
-        const roleColor = message.guild.me.highestRole.hexColor;
-
+     
   
             message.channel.send(args.join(" "));
     
