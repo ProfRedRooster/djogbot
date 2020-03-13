@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const discord = require("discord.js");
 const { stripIndents } = require("common-tags");
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
 }
 
 function getAll(client, message) {
-    const embed = new RichEmbed()
+    const embed = new discord.RichEmbed()
         .setColor("RANDOM")
 
     const commands = (category) => {
