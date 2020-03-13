@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/daantje1/djogbot/issues"
   },
-  "homepage": "https://github.com/daantje1/djogbot#readme"
+  "homepage": "https://github.com/daantje1/djogbot#readme",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  }
 }
