@@ -25,8 +25,8 @@ client.on("ready", () => {
     client.user.setPresence({
         status: "online",
         game: {
-            name: "me getting developed",
-            type: "STREAMING"
+            name: "DJOG",
+            type: "WATCHING"
         }
     }); 
 });
@@ -51,4 +51,4 @@ client.on("message", async message => {
         command.run(client, message, args);
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.token);
