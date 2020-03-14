@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-   return message.channel.send(message.guild.id);
+   return message.author.send("De server id is:" + message.guild.id);
     
 }
 
