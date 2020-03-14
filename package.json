@@ -16,7 +16,8 @@
   "dependencies": {
     "discord.js": "latest",
     "discord.js-reaction-menu": "latest",
-    "picomatch": "latest"
+    "picomatch": "latest",
+    "random-puppy": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "latest"
