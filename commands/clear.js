@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-module.exports.run = async(bot, message, args) => {
+module.exports.run = async(bot, msg, args) => {
 
    
 const amount = args.join(' '); // Amount of messages which should be deleted
