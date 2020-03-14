@@ -44,7 +44,11 @@ bot.on("ready", async () => {
 })
 
 bot.on("message", async message => {
-
+    if (message.isMemberMentioned(client.user)) { //we check, whether the bot is mentioned, client.user returns the user that the client is logged in as
+        message.channel.send("Hoi! mijn prefix hier is !");
+        message.channel.send("typ !help voor een lijst met commandos");
+        return;
+     }
     if(message.author.bot) return;
 
     if(message.channel.type === "dm") return;
