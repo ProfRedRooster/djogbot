@@ -14,7 +14,11 @@ module.exports.run = async(bot, message, args) => {
             message.channel.send("!arduino om met Arduino te beginnen");
             return;
          }, 5000); //time in milliseconds
+           setTimeout(function(){ 
             message.channel.send("!mbot om met mBot te beginnen");
+            return;
+         }, 5000); //time in milliseconds
+            
             message.channel.send("!processing om met Processing te beginnen");
             return;
          }, 1000); //time in milliseconds
