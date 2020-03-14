@@ -30,6 +30,6 @@ if(message.member.roles.some(r=>["Groningen", "Appingedam"].includes(r.name)) ) 
 
 module.exports.help = {
 
-    name: "help"
+    name: "groningen"
 
 }
