@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
   
-    message.channel.send("Welkom bij de les: Hoe werkt de Discord?");
+    message.channel.send("Welkom bij de les: Hoe geef ik aan wie ik ben?");
     setTimeout(function(){ 
         message.channel.send("Laten we beginnen!");
         setTimeout(function(){ 
