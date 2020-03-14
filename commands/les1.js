@@ -11,9 +11,17 @@ module.exports.run = async(bot, message, args) => {
             setTimeout(function(){ 
                 //Code
                 message.channel.send("Oke! de tijd is om, een ogenblikje alstjeblieft");
-                if(message.member.roles.find(r => r.name === "Groningen") || message.member.roles.find(r => rname === "Appingedam")){
+                if (message.member.roles.some(role => role.name === 'Groningen')) {
+
+
                 
-                    return message.channel.send("Goed zo! Je hebt jezelf een rol gegeven! dat was het einde van de eerste les! volgende les? doe dan !les2");
+                    return message.channel.send("Goed zo! Je hebt jezelf de Groningen rol gegeven! dat was het einde van de eerste les! volgende les? doe dan !les2");
+
+                }
+                if (message.member.roles.some(role => role.name === 'Appingedam')) {
+
+
+                
 
                 }
                 return message.channel.send("Ik kon geen rol detecteren! probeer de les opnieuw met !les1");
