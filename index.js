@@ -10,7 +10,7 @@ fs.readdir("./commands/", (err, files) => {
 
     if(jsFiles.length <= 0) {
 
-        console.log("/commands directory is empty!");
+        console.log("/commands/ directory is empty!");
         rerurn;
     }
 
