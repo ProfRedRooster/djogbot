@@ -44,9 +44,10 @@ bot.on("ready", async () => {
 })
 
 bot.on("message", async message => {
+ 
     if(message.author.bot) return;
 
-    if(message.channel.type === "dm") return;
+    if(message.channel.type === "dm") return message.channel.send("Nee! hoevaak moet ik het nog zeggen, ik wil GEEN kinderpostze... oh, jij bent het, uhh, doe je commands even in de server");
 
     //var prefix = botConfig.prefix; old method
 
