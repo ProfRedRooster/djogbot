@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.0.2",
-    "discord.js-reaction-menu": "^1.0.1"
+    "discord.js-reaction-menu": "^1.0.1",
+    "picomatch": "^2.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
