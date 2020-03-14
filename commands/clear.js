@@ -12,6 +12,7 @@ if (amount > 100) return msg.reply('Oh, te veel werk, heb ik geen zin in, ik ga 
 if (amount < 1) return msg.reply('Uhh, dat is onmogelijk'); // Checks if the `amount` integer is smaller than 1
 
 await msg.channel.messages.fetch({ limit: amount }).then(messages => { // Fetches the messages
+    amount = amount + 1
     msg.channel.bulkDelete(messages // Bulk deletes all messages that have been fetched and are not older than 14 days (due to the Discord API)
 )});
 }
