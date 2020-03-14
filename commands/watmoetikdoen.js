@@ -10,7 +10,10 @@ module.exports.run = async(bot, message, args) => {
         message.channel.send(" ");
         message.channel.send("We gaan aan de slag met de hoofdstukken in een van de drie vakken die Richel geeft! \n\n Gebruik de volgende commandos \n\n");
         setTimeout(function(){ 
+         setTimeout(function(){ 
             message.channel.send("!arduino om met Arduino te beginnen");
+            return;
+         }, 5000); //time in milliseconds
             message.channel.send("!mbot om met mBot te beginnen");
             message.channel.send("!processing om met Processing te beginnen");
             return;
