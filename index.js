@@ -44,9 +44,10 @@ bot.on("ready", async () => {
 })
 
 bot.on("message", async message => {
+ 
     if(message.author.bot) return;
 
-    if(message.channel.type === "dm") return;
+    if(message.channel.type === "dm") return message.channel.send("Doe de commandos in de server, niet in mijn pms!");
 
     //var prefix = botConfig.prefix; old method
 
