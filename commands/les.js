@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+const Discord = require("discord.js");
 const rm = require('discord.js-reaction-menu');
 
 module.exports.run = async(bot, message, args) => {
