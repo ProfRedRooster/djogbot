@@ -9,10 +9,10 @@ module.exports.run = async(bot, message, args) => {
             message.channel.send("Als eerste, ben je van groningen of appingedam? doe ?rank [Groningen of Appingedam] ik geef je een halve minuut voordat we verdergaan");
             setTimeout(function(){ 
                 //Code
-                message.channel.send("Oke! de tijd is om!");
+                message.channel.send("\n \n Oke! de tijd is om!");
                 
-                message.channel.send("je hebt de les gehaald! doe hem opnieuw met !les1");
-                message.channel.send("Hier is je certificaat: https://github.com/daantje1/djogbot/raw/master/certificaat.png");
+                message.channel.send("\n \nje hebt de les gehaald! doe hem opnieuw met !les1");
+                message.channel.send(" \n \nHier is je certificaat: https://github.com/daantje1/djogbot/raw/master/certificaat.png");
              }, 30000); //time in milliseconds
          }, 5000); //time in milliseconds
      }, 5000); //time in milliseconds
