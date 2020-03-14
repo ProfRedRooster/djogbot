@@ -12,7 +12,8 @@ if (amount < 1) return msg.reply('Uhh, dat is onmogelijk'); // Checks if the `am
 message.delete();
 await msg.channel.messages.fetch({ limit: amount }).then(messages => { // Fetches the messages
     msg.channel.bulkDelete(messages // Bulk deletes all messages that have been fetched and are not older than 14 days (due to the Discord API)
-)});
+    message.reply("Ik heb " + messages + " berichten verwijderd!")
+    )});
 }
 
 module.exports.help = {
