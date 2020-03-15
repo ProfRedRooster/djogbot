@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-
+ message.delete();
     message.channel.send("Goede vraag! Het antwoord is simpel: doen wat Richel zegt :sunglasses:");
     setTimeout(function(){ 
         message.delete();
