@@ -4,7 +4,7 @@ const ms = require("ms");
 module.exports.run = async (bot, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("De hebt niet de benodigde rechten");
-  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(member => member.name === args[0]));
   if(!tomute) return message.reply("Die gebruiker is niet gevonden!");
   if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Die gebruiker is een administrator");
   let muterole = message.guild.roles.find(muterole => muterole.name === "muted");
