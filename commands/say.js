@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) => {
   let botmessage = args.join(" "); //Dit zorgt ervoor dat hij jou args (Argumenten) opvangt en kan versturen
   message.channel.send(botmessage);  //Verstuur het bericht, en welk bericht? Nou dat zie je hierboven onze argumenten dus
 }
-}
 
 module.exports.help = {
   name: "say"
