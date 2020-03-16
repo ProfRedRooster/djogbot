@@ -2,8 +2,9 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-  return message.channel.send("Hier is je DigiRanja! https://thumbs.dreamstime.com/b/glas-rote-limonade-39906916.jpg")
-    
+    const embed = new discord.RichEmbed()
+	.setImage("https://thumbs.dreamstime.com/b/glas-rote-limonade-39906916.jpg");
+	message.channel.send(embed);
 }
 
 module.exports.help = {
