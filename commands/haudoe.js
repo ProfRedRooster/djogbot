@@ -6,7 +6,7 @@ const embed = {
   "title": "Haudoe!",
   "color": 16209920,
   "image": {
-    "url": "https://github.com/daantje1/djogbot/blob/master/ah.png?raw=true"
+    "url": "https://github.com/daantje1/djogbot/blob/master/andre.png?raw=true"
   }
 };
 message.channel.send({ embed });
