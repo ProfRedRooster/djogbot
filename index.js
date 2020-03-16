@@ -40,7 +40,6 @@ bot.on("ready", async () => {
     console.log(`Bot started!`)
 
     bot.user.setActivity("DJOG");
-bot.channels.get(`647463584342999041`).send(`Ik ben er weer!`)
 
 
 
