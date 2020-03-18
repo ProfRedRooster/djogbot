@@ -50,7 +50,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
      if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
     message.delete() //delete the message
-      .then(message.channel.send('Discord invites zijn niet toegestaan!'))
+      .then(message.reply('Discord invites zijn niet toegestaan!'))
   }
 
 
