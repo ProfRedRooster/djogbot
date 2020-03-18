@@ -52,6 +52,10 @@ bot.on("message", async message => {
     message.delete() //delete the message
       .then(message.channel.send('Discord invites zijn niet toegestaan!'))
   }
+       if (message.content.includes('kanker'||'Kanker' || 'KANKER' || 'Kut' || 'kut' || 'KUT' ||)) { //if it contains an invite link
+    message.delete() //delete the message
+      .then(message.channel.send('Niet Schelden AUB.'))
+  }
 
    
 
