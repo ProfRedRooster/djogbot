@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const randomPuppy = require("random-puppy");
 
 module.exports.run = async(bot, message, args) => {
-message.channel.send("MEME AANVAL!!!");
+message.channel.send("Een ogenblikje, ik vraag alle memes op");
     const subReddits = ["meme", "memes"];
     // Grab a random property from the array
     const random = subReddits[Math.floor(Math.random() * subReddits.length)];
@@ -24,8 +24,9 @@ message.channel.send("MEME AANVAL!!!");
 
 
 message.channel.send(img);
-message.channel.send(img2);
-message.channel.send(img3);
+    function myFunc(arg) {
+        message.channel.send(img);
+        message.channel.send(img3);
 message.channel.send(img4);
 message.channel.send(img5);
 message.channel.send(img6);
@@ -35,6 +36,11 @@ message.channel.send(img9);
 message.channel.send(img10);
 message.channel.send(img11);
 message.channel.send(img12);
+
+}
+
+setTimeout(myFunc, 5000, 'funky');
+
 
 }
 
