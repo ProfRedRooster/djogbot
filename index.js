@@ -48,7 +48,7 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
  
     if(message.author.bot) return;
-    if(message.member.guild.me.hasPermission('MANAGE_MESSAGES') return;
+    if(message.member.guild.me.hasPermission('MANAGE_MESSAGES') return message.channel.send("Ik heb geen permissie om te verwijderen!");
      if (message.content.includes('discord.gg/'||'discordapp.com/invite/'||'http://'|| 'https://')) { //if it contains an invite link
     message.delete() //delete the message
       .then(message.reply('Discord invites zijn niet toegestaan!'))
