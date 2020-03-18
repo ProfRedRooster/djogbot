@@ -22,8 +22,6 @@ message.channel.send("Een ogenblikje, ik vraag alle memes op");
     const img12 = await randomPuppy(random);
     
 
-
-message.channel.send(img);
     function myFunc(arg) {
         message.channel.send(img);
         message.channel.send(img3);
