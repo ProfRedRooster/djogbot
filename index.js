@@ -53,7 +53,20 @@ bot.on("message", async message => {
       .then(message.channel.send('Discord invites zijn niet toegestaan!'))
   }
 
+var swearWords = JSON.parse(fs.readFileSync("./data/swearWords.json"));
+    var msg = message.content.toLowerCase();
 
+    for (var i = 0; i < swearWords["vloekWoorden"].length; i++) {
+
+        if (msg.includes(swearWords["vloekWoorden"][i])) {
+
+            message.delete();
+
+            return message.channel.send("Niet Schelden").then(msg => msg.delete(2000));
+
+        }
+
+    }
    
 
     //var prefix = botConfig.prefix; old method
