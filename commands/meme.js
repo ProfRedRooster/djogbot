@@ -10,7 +10,14 @@ module.exports.run = async(bot, message, args) => {
     const img = await randomPuppy(random);
 
 
-    message.channel.send(img);
+    const embed = {
+  "title": "Hier is je huisgedownloade meme",
+  "color": 16209920,
+  "image": {
+    "url": img
+  }
+};
+message.channel.send({ embed });
 }
 
 module.exports.help = {
