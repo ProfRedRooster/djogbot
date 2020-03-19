@@ -1,7 +1,7 @@
-// const discord = require("discord.js");
-// const randomPuppy = require("random-puppy");
-// 
-// module.exports.run = async(bot, message, args) => {
+const discord = require("discord.js");
+const randomPuppy = require("random-puppy");
+module.exports.run = async(bot, message, args) => {
+  return message.channel.send("Memes zijn uitgeschakeld tijdens de les!");
 //     const subReddits = ["meme", "memes"];
 //     // Grab a random property from the array
 //     const random = subReddits[Math.floor(Math.random() * subReddits.length)];
@@ -18,8 +18,8 @@
 //message.channel.send({ embed });
 //}
 //
-//module.exports.help = {
-//
-//    name: "meme"
-//
-//}
+module.exports.help = {
+
+  name: "meme"
+
+ }
