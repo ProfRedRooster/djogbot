@@ -49,12 +49,12 @@ bot.on("message", async message => {
  
     if(message.author.bot) return;
      if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
-             if(message.member.hasPermission("MANAGE_MESSAGES")) return;
+             if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
     message.delete() //delete the message
       .then(message.reply('Discord invites zijn niet toegestaan!'))
   }
      if (message.content.includes('https://'||'http://')) { //if it contains an invite link
-               if(message.member.hasPermission("MANAGE_MESSAGES")) return;
+                if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
     message.delete() //delete the message
       .then(message.reply('Links zijn niet toegestaan!'))
   }
