@@ -53,11 +53,8 @@ bot.on("message", async message => {
     message.delete() //delete the message
       .then(message.reply('Discord invites zijn niet toegestaan!'))
   }
-     if (message.content.includes('https://'||'http://')) { //if it contains an invite link
-                if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
-    message.delete() //delete the message
-      .then(message.reply('Links zijn niet toegestaan!'))
-  }
+    
+ 
 
 
    
