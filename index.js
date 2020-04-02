@@ -46,7 +46,11 @@ const activities_list = [
     "!help",
     "DJOG",
     "Gemaakt door Daan en Richel",
-    "Ï love richel"
+    "I love richel",
+    "Zeg altijd haudoe als je weggaat",
+    "Leest iemand dit echt?",
+    "Pizza is lekker!",
+    "Mijn aanrader voor eten? een dubbele Accuburger met extra stroom!"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
     setInterval(() => {
