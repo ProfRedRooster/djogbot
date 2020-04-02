@@ -40,11 +40,12 @@ bot.on("ready", async () => {
     console.log(`Bot started!`)
 
 const activities_list = [
-    "with code", 
-    "with the developers console",
-    "with c++", 
-    "with JavaScript",
-    "DJOG"
+    "met code", 
+    "met c++",
+    "met discord", 
+    "!help",
+    "DJOG",
+    "Gemaakt door Daan en Richel"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
     setInterval(() => {
