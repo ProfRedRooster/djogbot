@@ -53,6 +53,8 @@ bot.on('guildMemberRemove', member => {
 bot.on("ready", async () => {
 
     console.log(`Bot started!`)
+    bot.user.setActivity("||Bezig Met Updaten||");
+    
 
 const activities_list = [
     "met code", 
