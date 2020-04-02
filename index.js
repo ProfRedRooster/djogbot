@@ -45,7 +45,8 @@ const activities_list = [
     "met discord", 
     "!help",
     "DJOG",
-    "Gemaakt door Daan en Richel"
+    "Gemaakt door Daan en Richel",
+    "Ï love richel"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
     setInterval(() => {
