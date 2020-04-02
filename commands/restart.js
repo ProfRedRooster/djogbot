@@ -11,8 +11,7 @@ function resetBot(channel) {
     .then (() => message.channel.send("Klaar!"))
     
 }
-   resetBot(message.channel);
-            break;
+   return resetBot(message.channel);
 
     
 }
