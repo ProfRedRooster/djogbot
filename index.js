@@ -91,35 +91,13 @@ bot.on("message", async message => {
     message.delete() //delete the message
       .then(message.reply('Discord invites zijn niet toegestaan!'))
   }
-      if (message.content.includes('http://')) { //if it contains an invite link
-             if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
-    message.delete() //delete the message
-      .then(message.reply('Links zijn niet toegestaan!'))
-  }
-    if (message.content.includes('https://')) { //if it contains an invite link
-             if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
-    message.delete() //delete the message
-      .then(message.reply('Links zijn niet toegestaan!'))
-  }
-    
     
  
 
 
    
 
-    //var prefix = botConfig.prefix; old method
-
-    var prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
-
-    if(!prefixes[message.guild.id]){
-        prefixes[message.guild.id] = {
-        prefixes: botConfig.prefix
-        }
-    }
-
-
-    var prefix = prefixes[message.guild.id].prefixes;
+    var prefix = botConfig.prefix;
     var messsageArray = message.content.split(" ");
 
     var command = messsageArray[0];
