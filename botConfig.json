@@ -1,3 +1,5 @@
 {
     "prefix": "!"
+    "FILTER_LIST" : ["test", "aqp", "frak", "shite"]
+
 }
