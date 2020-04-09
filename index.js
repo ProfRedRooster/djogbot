@@ -83,9 +83,6 @@ const activities_list = [
 bot.on("message", async message => {
  
  if(botConfig.FILTER_LIST.some(word => message.content.toLowerCase().includes(word))){
-      if(message.member.roles.find(r => r.name === "Admin") || message.member.roles.find(r => rname === "BotMaster")){
-        return message.channel.send("Je bent immuun :sunglasses: Scheld ze!");
-      }
           message.delete()
     message.reply("Niet Schelden!");
   }
