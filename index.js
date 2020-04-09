@@ -83,6 +83,15 @@ const activities_list = [
 bot.on("message", async message => {
  
     if(message.author.bot) return;
+      const blocked = profanity.filter(word => message.content.toLowerCase().includes(word));
+
+  if (blocked.length > 0) {
+    message.channel.send('${message.author.tag}, Niet schelden!');
+
+    return message.delete()
+      .catch(console.error);
+  }
+});
      if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
              if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
     message.delete() //delete the message
