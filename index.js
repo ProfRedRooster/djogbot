@@ -86,7 +86,7 @@ bot.on("message", async message => {
  if(botConfig.FILTER_LIST.some(word => message.content.toLowerCase().includes(word))){
     message.delete()
     message.reply("Niet Schelden!");
-  }})
+  }
      if (message.content.includes('discord.gg/'||'discordapp.com/invite/')) { //if it contains an invite link
              if(message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Link plaatsen toegestaan: je hebt de permissie!");
     message.delete() //delete the message
