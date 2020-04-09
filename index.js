@@ -3,7 +3,6 @@ const botConfig = require("./botConfig.json");
 const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
-const profanity = require('./swearwords.json');
 
 fs.readdir("./commands/", (err, files) => {
 
