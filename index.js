@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+//const discord = require("discord.js");
 const botConfig = require("./botConfig.json");
 const fs = require("fs");
 const bot = new discord.Client();
