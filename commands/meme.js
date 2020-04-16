@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
  const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 // 
    // Get a random image from the subreddit page
- //const img = await randomPuppy(random);
+ const img = await randomPuppy(random);
   const embed = {
  "title": "Hier is je huisgedownloade meme",
  "color": 16209920,
