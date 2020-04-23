@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
 
     	if (message.member.voice.channel) {
 		const connection = await message.member.voice.channel.join();
-		const dispatcher = connection.play('rr.mp3');
+		connection.play('https://github.com/daantje1/djogbot/blob/master/rr.mp3?raw=true');
 
 dispatcher.on('start', () => {
 	message.channel.send("Het beste liedje ooit is nu aan het spelen!");
