@@ -13,6 +13,11 @@ dispatcher.on('start', () => {
 
 dispatcher.on('finish', () => {
 	message.channel.send("Afgelopen :(");
+	// Option 1
+connection.disconnect();
+
+// Option 2
+voiceChannel.leave();
 });
 
 // Always remember to handle errors appropriately!
