@@ -3,10 +3,10 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
 
 
-    const channel = message.member.voiceChannel;
-    channel.join()
-    .then(connection => message.channel.send('Verbonden'))
-    .catch(console.error);
+    	if (message.member.voice.channel) {
+		const connection = await message.member.voice.channel.join();
+	}else{
+        message.channel.send("Je bent niet verbonden met een spraakkanaal!");
 
 
 }
