@@ -7,6 +7,7 @@ module.exports.run = async(bot, message, args) => {
 		const connection = await message.member.voice.channel.join();
 	}else{
         message.channel.send("Je bent niet verbonden met een spraakkanaal!");
+	}
 
 
 }
