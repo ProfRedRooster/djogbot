@@ -54,6 +54,15 @@ bot.on("ready", async () => {
 
     console.log(`Bot started!`)
     bot.user.setActivity("||Bezig Met Updaten||");
+    const channel = client.channels.get("689175000095260840");
+  if (!channel) return console.error("The channel does not exist!");
+  channel.join().then(connection => {
+    // Yay, it worked!
+    console.log("Successfully connected.");
+  }).catch(e => {
+    // Oh no, it errored! Let's log it to console :)
+    console.error(e);
+  });
     
 
 const activities_list = [
