@@ -2,9 +2,9 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
 
  message.channel.send("**Uitgezet voor 5 minuten**");
- client.destroy();
+ bot.destroy();
   setTimeout(function(){ 
-         client.login(process.env.token);
+         bot.login(process.env.token);
          return message.channel.send("Ben er weer!");
          }, 300000); //time in milliseconds
 }
