@@ -3,7 +3,7 @@ const randomPuppy = require("random-puppy");
 const talkedRecently = new Set();
 module.exports.run = async(bot, message, args) => {
      if (talkedRecently.has(message.author.id)) {
-            message.channel.send("**Het meme commando heeft een cooldown!** \n\n Wacht **20 seconden** voordat je weer een meme kan krijgen!");
+            message.reply("Wacht **20 seconden** voordat je weer !meme kan gebruiken!");
     } else {
 
            // the user can type the command ... your command code goes here :)
