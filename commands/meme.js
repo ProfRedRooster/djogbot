@@ -20,6 +20,7 @@ module.exports.run = async(bot, message, args) => {
     "url": img
   }
 };
+message.reply("Je kan !meme een keer in de 20 seconden gebruiken");
 message.channel.send({ embed });
 
         // Adds the user to the set so that they can't talk for a minute
