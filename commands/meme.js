@@ -1,7 +1,13 @@
 const discord = require("discord.js");
 const randomPuppy = require("random-puppy");
+const talkedRecently = new Set();
 module.exports.run = async(bot, message, args) => {
-    const subReddits = ["meme", "memes"];
+     if (talkedRecently.has(msg.author.id)) {
+            msg.channel.send("Wacht 10 seconden voordat je dit commando weer kan uitvoeren. - " + msg.author);
+    } else {
+
+           // the user can type the command ... your command code goes here :)
+            const subReddits = ["meme", "memes"];
     // Grab a random property from the array
  const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 // 
@@ -15,6 +21,14 @@ module.exports.run = async(bot, message, args) => {
   }
 };
 message.channel.send({ embed });
+
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(msg.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(msg.author.id);
+        }, 10000);
+    }
 }
 module.exports.help = {
 
