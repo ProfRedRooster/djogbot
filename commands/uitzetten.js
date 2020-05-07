@@ -5,9 +5,11 @@ module.exports.run = async(bot, message, args) => {
  message.delete();
  const member = message.guild.member(message.author);
 if(!message.guild.member(message.author).hasPermission('MANAGE_WEBHOOKS')) {
-  return message.channel.send(":x: Geen toegang. :x:") 
+  message.channel.send(":x: Geen toegang. :x:") 
+ return console.log("---IEMAND HEEFT GEPROBEERD DE BOT TE STOPPEN---");
 }
 message.reply("Bot wordt uitgezet voor **5 minuten**");
+ console.log("---DE BOT IS UITGEZET VOOR 5 MINUTEN---");
 bot.destroy()
  setTimeout(function(){ 
       bot.login(process.env.token)
