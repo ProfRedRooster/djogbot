@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
 
     	if (message.member.voice.channel) {
 		const connection = await message.member.voice.channel.join();
-		connection.play('http://dw.convertfiles.com/files/0313435001587664234/rr.aac');
+		connection.play('https://cdn-34.anonfile.com/laN5O6wfo9/41018414-1588869557/rr.wav');
 
 dispatcher.on('start', () => {
 	message.channel.send("Het beste liedje ooit is nu aan het spelen!");
