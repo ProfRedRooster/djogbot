@@ -3,7 +3,7 @@ const randomPuppy = require("random-puppy");
 const talkedRecently = new Set();
 module.exports.run = async(bot, message, args) => {
      if (talkedRecently.has(msg.author.id)) {
-            msg.channel.send("Wacht 10 seconden voordat je dit commando weer kan uitvoeren. - " + msg.author);
+            message.channel.send("Wacht 10 seconden voordat je dit commando weer kan uitvoeren. - " + msg.author);
     } else {
 
            // the user can type the command ... your command code goes here :)
@@ -23,10 +23,10 @@ module.exports.run = async(bot, message, args) => {
 message.channel.send({ embed });
 
         // Adds the user to the set so that they can't talk for a minute
-        talkedRecently.add(msg.author.id);
+        talkedRecently.add(message.author.id);
         setTimeout(() => {
           // Removes the user from the set after a minute
-          talkedRecently.delete(msg.author.id);
+          talkedRecently.delete(message.author.id);
         }, 10000);
     }
 }
