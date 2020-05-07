@@ -2,8 +2,8 @@ const discord = require("discord.js");
 const randomPuppy = require("random-puppy");
 const talkedRecently = new Set();
 module.exports.run = async(bot, message, args) => {
-     if (talkedRecently.has(msg.author.id)) {
-            message.channel.send("Wacht 10 seconden voordat je dit commando weer kan uitvoeren. - " + msg.author);
+     if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Wacht 10 seconden voordat je dit commando weer kan uitvoeren. - " + message.author);
     } else {
 
            // the user can type the command ... your command code goes here :)
