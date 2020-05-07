@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-
+const talkedRecently = new Set();
 module.exports.run = async(bot, message, args) => {
   if (talkedRecently.has(message.author.id)) {
             message.reply("Wacht **10 seconden** voordat je weer !ping kan gebruiken!");
