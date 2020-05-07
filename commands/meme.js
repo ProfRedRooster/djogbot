@@ -3,7 +3,7 @@ const randomPuppy = require("random-puppy");
 const talkedRecently = new Set();
 module.exports.run = async(bot, message, args) => {
      if (talkedRecently.has(message.author.id)) {
-            message.channel.send("Wacht 10 seconden voordat je dit commando weer kan uitvoeren. - " + message.author);
+            message.channel.send("**Het meme commando heeft een cooldown!** \n\n Wacht **20 seconden** voordat je weer een meme kan krijgen!");
     } else {
 
            // the user can type the command ... your command code goes here :)
@@ -27,7 +27,7 @@ message.channel.send({ embed });
         setTimeout(() => {
           // Removes the user from the set after a minute
           talkedRecently.delete(message.author.id);
-        }, 10000);
+        }, 20000);
     }
 }
 module.exports.help = {
